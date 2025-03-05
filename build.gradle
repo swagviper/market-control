@@ -4,6 +4,10 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.7'
 }
 
+bootJar {
+	mainClass = 'dev.swagviper.market_control.MarketControlApplication'
+}
+
 group = 'dev.swagviper'
 version = '0.0.1-SNAPSHOT'
 
