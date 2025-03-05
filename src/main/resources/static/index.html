@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Gerenciador de Mercado">
+    <meta property="og:description" content="Um sistema básico de gerenciamento de mercado.">
+    <meta property="og:url" content="https://swagviper.dev">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- Hover.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <!-- Particles.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.css">
+    <title>Gerenciador de Mercado</title>
+    <link rel="shortcut icon" href="images/carrinho.png" type="image/x-icon">
+</head>
+<body>
+<!-- Particles.js Container -->
+<div id="particles-js"></div>
+
+<header>
+    <div class="interface">
+        <div class="text-swagviper-header">
+            <a href="#">
+                <p>swagviper<span>.</span></p>
+            </a>
+        </div>
+
+        <nav class="menu-desktop">
+            <ul>
+                <li><a href="#" onclick="scrollToSection('criar-produto')" class="hvr-grow">Criar produto</a></li>
+                <li><a href="#" onclick="scrollToSection('atualizar-produto')" class="hvr-grow">Atualizar produto</a></li>
+                <li><a href="#" onclick="scrollToSection('listar-produtos')" class="hvr-grow">Listar produtos</a></li>
+            </ul>
+        </nav>
+
+        <div class="btn-contato">
+            <a href="https://github.com/swagviper" target="_blank" class="hvr-grow">
+                <i class="bi bi-github"></i> <span>Entre em contato</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="topo-do-site" data-aos="fade-up" data-aos-duration="1000">
+        <div class="interface">
+            <div class="flex">
+                <div class="txt-topo-site">
+                    <h1>Um sistema <span id="typed-text"></span> <br> para o <span>controle eficiente</span> de um mercado!</h1>
+                    <p>Este é um projeto <b>fictício</b> criado por swagviper, com o objetivo de aprimorar habilidades em desenvolvimento e gerenciamento.</p>
+                </div>
+                <div class="img-topo-site">
+                    <img src="images/carrinho2.png" alt="Carrinho" class="hvr-bob">
+                </div>
+            </div>
+            <div class="line-footer borda"></div>
+        </div>
+    </section>
+
+    <section class="seta-baixo" data-aos="fade-up" data-aos-duration="1000">
+        <div class="seta-baixo"></div>
+    </section>
+
+    <section class="criar-produto">
+        <div class="flex">
+            <div class="txt-form-criar-produto">
+                <h5 class="card-title">Adicione um produto ao catálogo. <br> <span>*</span>Todos os campos são obrigatórios.<span>*</span> <br></h5>
+                <div class="img-form-criar-produto">
+                    <img src="images/gestão-de-estoque.png" alt="Carrinho" class="hvr-float">
+                </div>
+            </div>
+            <div class="formulario">
+                <form id="productForm">
+                    <input type="hidden" id="productId">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Descrição</label>
+                        <textarea class="form-control" id="description" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Preço</label>
+                        <input type="number" step="0.01" class="form-control" id="price" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="quantity" class="form-label">Quantidade</label>
+                        <input type="number" class="form-control" id="quantity" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Categoria</label>
+                        <input type="text" class="form-control" id="category" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary hvr-grow">Salvar</button>
+                    <button type="button" class="btn btn-secondary hvr-grow" onclick="clearForm()">Limpar</button>
+                </form>
+            </div>
+        </div>
+        <div class="line-footer borda"></div>
+    </section>
+
+    <section class="listar-produtos">
+        <div class="interface">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Lista de Produtos</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Categoria</th>
+                            <th>Ações</th>
+                        </tr>
+                        </thead>
+                        <tbody id="productTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Scripts -->
+<!-- AOS (Animate On Scroll) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- Particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('Partículas carregadas!');
+    });
+</script>
+<!-- Tilt.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+<script>
+    $('.img-topo-site img').tilt({
+        scale: 1.1,
+        glare: true,
+        maxGlare: 0.5,
+    });
+</script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Seu Script -->
+<script src="/script.js"></script>
+</body>
+</html>

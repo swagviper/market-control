@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('images/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* ESTILO CABEÇALHO */
+
+header {
+    padding: 60px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #007bff;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    font-size: 18px;
+}
+
+.text-swagviper-header span {
+    color: crimson;
+}
+
+header a:hover {
+    color: rgb(0, 0, 0);
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.text-swagviper-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* SECTION TOPO DO SITE */
+
+section.topo-do-site{
+    padding: 90px 4%;
+}
+
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topo-do-site h1{
+    font-size: 62px;
+    line-height: 52px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #007bff;
+}
+
+.topo-do-site .txt-topo-site p{
+    margin: 40px 0px;
+}
+
+.topo-do-site .img-topo-site img{
+    height: 600px;
+    margin-left: 100px;
+    position: relative;
+}
+
+.topo-do-site .borda{
+    width: 46%;
+    border-top: 4px solid #007bff;
+    margin: 50px auto;
+    border-radius: 50%;
+}
+
+
+/* SECTION CRIAR PRODUTO */
+section.criar-produto {
+    padding: 60px 4%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.1px);
+}
+
+section.criar-produto .flex {
+    align-items: flex-start;
+    gap: 40px;
+}
+
+section.criar-produto .txt-form-criar-produto {
+    width: 100%;
+    text-align: center;
+}
+
+section.criar-produto .txt-form-criar-produto h5 {
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
+    margin-top: 20px;
+}
+
+section.criar-produto .txt-form-criar-produto h5 span{
+    color: red;
+    margin-top: 20px;
+}
+
+section.criar-produto .img-form-criar-produto {
+    margin-top: 20px;
+}
+
+section.criar-produto .img-form-criar-produto img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 80px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(100px);
+}
+
+section.criar-produto .formulario {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section.criar-produto .formulario label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+section.criar-produto .formulario .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+section.criar-produto .formulario .form-control:focus {
+    border-color: #ffcc00;
+    outline: none;
+}
+
+section.criar-produto .formulario textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+section.criar-produto .formulario .btn {
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+section.criar-produto .formulario .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+section.criar-produto .formulario .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+section.criar-produto .formulario .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    margin-left: 10px;
+}
+
+section.criar-produto .formulario .btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+/* SECTION LISTAR PRODUTOS */
+section.listar-produtos {
+    padding: 60px 4%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.1px);
+}
+
+section.listar-produtos .card {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(1px);
+}
+
+section.listar-produtos .card-header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+section.listar-produtos .card-header h5 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+section.listar-produtos .card-body {
+    padding: 20px;
+}
+
+section.listar-produtos .table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+section.listar-produtos .table th,
+section.listar-produtos .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+section.listar-produtos .table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+section.listar-produtos .table-striped tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+section.listar-produtos .table-striped tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+section.listar-produtos .btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+}
+
+section.listar-produtos .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+section.listar-produtos .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+section.listar-produtos .btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+section.listar-produtos .btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
