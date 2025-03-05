@@ -6,6 +6,7 @@ RUN apt-get update && \
 COPY . /app
 WORKDIR /app
 
+RUN chmod +x gradlew
 RUN ./gradlew build
 
 FROM openjdk:21-jdk-slim
