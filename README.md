@@ -1,7 +1,7 @@
 <h1 align="center">Market Control</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Spring%20Boot-2.5.6-green" alt="Spring Boot">
+  <img src="https://img.shields.io/badge/Spring%20Boot-3.4.3-green" alt="Spring Boot">
   <img src="https://img.shields.io/badge/Java-21-blue" alt="Java">
   <img src="https://img.shields.io/badge/CRUD-API-orange" alt="CRUD API">
 </p>
@@ -65,9 +65,9 @@
 
 <ol>
   <li>Faça um fork do projeto</li>
-  <li>Crie uma branch para sua feature (<code>git checkout -b feature/AmazingFeature</code>)</li>
-  <li>Commit suas mudanças (<code>git commit -m 'Add some AmazingFeature'</code>)</li>
-  <li>Push para a branch (<code>git push origin feature/AmazingFeature</code>)</li>
+  <li>Crie uma branch para sua feature (<code>git checkout -b feature/newChange</code>)</li>
+  <li>Commit suas mudanças (<code>git commit -m 'Add some newChange'</code>)</li>
+  <li>Push para a branch (<code>git push origin feature/newChange</code>)</li>
   <li>Abra um Pull Request</li>
 </ol>
 
